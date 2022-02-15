@@ -1,0 +1,31 @@
+DATA_DIR: data
+
+# Will cause syntax errors since they begin with numbers
+variables_to_rename:
+  1stFlrSF: FirstFlrSF
+  2ndFlrSF: SecondFlrSF
+  3SsnPorch: ThreeSsnPortch
+
+features:
+  - LotArea
+  - OverallQual
+  - YearRemodAdd
+  - BsmtQual
+  - BsmtFinSF1
+  - TotalBsmtSF
+  - FirstFlrSF
+  - SecondFlrSF
+  - GrLivArea
+  - GarageCars
+    # this one is only to calculate temporal variable:
+  - YrSold
+
+target: SalePrice
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+
+drop_features: YrSold
