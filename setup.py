@@ -11,9 +11,7 @@ LIST_OF_REQUIREMENTS=["tqdm",
 "pandas",
 "numpy",
 "Scipy",
-"pyyaml",
 "scikit-learn",
-"lxml",
 "pytest"]
 
 setup(
