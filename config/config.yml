@@ -31,3 +31,47 @@ random_state: 0
 drop_features: YrSold
 
 temporal_vars: YearRemodAdd
+
+numerical_vars:
+  - LotArea
+  - OverallQual
+  - YearRemodAdd
+  - BsmtQual
+  - BsmtFinSF1
+  - TotalBsmtSF
+  - FirstFlrSF
+  - SecondFlrSF
+  - GrLivArea
+  - GarageCars
+
+categorical_vars:
+  - BsmtQual
+
+rare_label_tol: 0.01
+
+rare_label_n_categories: 5
+
+# The number of boosting stages to perform
+n_estimators: 50
+
+# loss function to be optimized
+loss: ls
+
+numerical_na_not_allowed:
+  - LotArea
+  - OverallQual
+  - YearRemodAdd
+  - BsmtFinSF1
+  - TotalBsmtSF
+  - FirstFlrSF
+  - SecondFlrSF
+  - GrLivArea
+  - GarageCars
+  - YrSold
+
+test_data_file: "test.csv"
+training_data_file: "train.csv"
+
+TRAINED_MODEL_DIR: 'trained_models'
+
+pipeline_save_file: gb_regression_output_v

@@ -6,13 +6,16 @@ with open("README.md","r",encoding='utf-8') as f:
 REPO_NAME="MLTests"
 AUTHOR_USER_NAME="kartheek23"
 SRC_REPO="src"
-LIST_OF_REQUIREMENTS=["tqdm",
-"dvc",
+LIST_OF_REQUIREMENTS=[
 "pandas",
 "numpy",
 "Scipy",
-"scikit-learn",
-"pytest"]
+"scikit-learn==0.22.1",
+"pytest",
+"feature_engine>=0.3.1,<0.4.0",
+"marshmallow>=3.2.2,<4.0",
+"tid-regression-model>=2.0.20,<2.1.0",
+'joblib>=0.14.1,<0.15.0']
 
 setup(
     name=SRC_REPO,
